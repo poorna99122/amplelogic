@@ -1,0 +1,47 @@
+<app-header></app-header>
+<div class="start-button">
+  <!-- <button mat-raised-button (click)="startTimer(100)">start</button> -->
+  <button mat-raised-button (click)="startTimer(100)" color="primary">Start</button>
+</div>
+
+<footer>
+  <div class="footer">
+    <div class="main-footer" *ngIf="!wholeBarVisible">
+    <!-- <div class="main-footer" > -->
+      <app-footer></app-footer>
+    </div>
+
+    <div class="toggle-button" *ngIf="toggleVisible">
+      <button mat-icon-button (click)="toggleProgressBar()">
+        <mat-icon>{{ progressBarVisible ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+    </div>
+
+    <div class="sub-wrapper" *ngIf="wholeBarVisible">
+    <!-- <div class="sub-wrapper" > -->
+    
+      <div class="main" *ngIf="progressBarVisible">
+        <div class="icon-wrapper">
+          <img src="../../assets/rocketIcon.png" alt="">
+        </div>
+        <div class="bar-wrapper">
+          <div class="content-wrapper">
+            <div class="content">
+              <p>Migrating Data to selected environment </p>
+            </div>
+            <div class="percent-wrapper">
+              <p>{{ curSec }}%</p>
+            </div>
+          </div>
+          <div class="bar-container">
+            <div class="bar">
+              <mat-progress-bar mode="determinate" [value]="progressbarValue"></mat-progress-bar>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</footer>

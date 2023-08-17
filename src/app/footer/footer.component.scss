@@ -1,0 +1,30 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+    .icon-wrapper {
+        margin-left: 10px;
+        img {
+            width: 82px;
+        }
+
+    }
+
+    .content-wrapper {
+        p {
+            color: grey;
+            font-size: 12px;
+        }
+    }
+
+    .version-wrapper{
+        margin-right: 10px;
+        p {
+            color: grey;
+            font-size: 12px;
+        }
+        
+    }
+}
